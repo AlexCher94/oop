@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Shape {
+            #name;
+
+            get name(){
+                return this.#name
+            }
+
+            set name(newName) {
+                this.#name = newName;
+            }
+
+            constructor(a) {
+                this.a = a;
+            }
+
+            info() {
+                return `Name: ${this.#name}` + `\na = ${this.a}`;
+            }
+
+            area() {
+                return undefined;
+            }
+
+            perimetr() {
+                return undefined;
+            }
+        }
+
+        class Square extends Shape {
+           area(){
+            return `this.a ** 2`;
+           }
+
+           perimetr() {
+            return 4 * this.a;
+           }
+        }
+
+        class Rectangle extends Shape {
+            constructor(a, b) {
+                super(a);
+                this.b = b;
+            }
+
+            info() {
+                return super.info(a) + `\nb = ${b}`
+            }
+            area(){
+            return thig.a * thitg.b;
+           }
+
+           perimetr() {
+            return (this.a + this.b ) * 2;
+           }
+
+
+        }
+        class Triangle extends Shape {
+
+        }
+
+   let square = new Square(5);
+   square.name = `Square`;
+   alert(square.name);
+   alert(square.info);
+   alert(square.area);
+   alert(square.perimetr);
+    </script>
+</body>
+
+</html>
