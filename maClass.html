@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Coffee {
+            constructor(name, volume, price) {
+                this.name = name;
+                this.volume = volume;
+                this.price = price;
+            }
+
+            make() {
+                alert("кофе готовится");
+            }
+
+            info(){
+                alert(`название  ${this.name}
+                объем  ${this.volume} 
+                цена  ${this.price}`);
+            }
+        }
+
+        class Americano extends Coffee {
+            make() {
+                alert("готовится американо");
+            }
+        }
+
+        // let coffee1 = new Coffee("coffee1", 100, 150);
+        // coffee1.make();
+        // coffee1.info();
+
+        let americano = new Americano("americano", 100, 159)
+        americano.info();
+        americano.make();
+    </script>
+</body>
+
+</html>
