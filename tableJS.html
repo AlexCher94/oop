@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>dd</th>
+            <th>dd</th>
+            <th>dd</th>
+        </tr>
+        <tr>
+            <td>nen 1</td>
+            <td>nen 2</td>
+            <td>nen 1</td>
+        </tr>
+        <tr>
+            <td>nen 1</td>
+            <td>nen 2</td>
+            <td>nen 2</td>
+        </tr>
+        <tr>
+            <td>nen 1</td>
+            <td>nen 2</td>
+            <td>nen 2</td>
+        </tr>
+    </table>
+
+    <script>
+        let tdList = document.querySelectorAll("td"); //получмлм список ячеек
+        for (let td of tdList) {
+            td.addEventListener("mouseover", changeBackground);
+            td.addEventListener("mouseout", changeBackground);
+        }
+
+        function changeBackground(event) {
+            //console.log(event);
+            let cell = event.target;
+            if (event.type === "mouseover") {
+                cell.style.backgroundColor = "orange";
+            }
+            else {
+                cell.style.backgroundColor = "white";
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
