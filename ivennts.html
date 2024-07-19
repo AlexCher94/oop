@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container" onmouseover="mouseOverHandler()">
+        <p id="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit impedit veniam, voluptates in enim pariatur
+            aliquid doloremque atque quas porro beatae qui eveniet autem officia suscipit eligendi, iusto, facilis nam!
+        </p>
+    </div>
+    <input type="button" value="click me" onclick="clickHandler()">
+
+    <script>
+
+        let div = document.getElementById("container");
+
+        // div.innerHTML = "<p>fdfgrtge<\p>";
+
+        div.style.backgroundColor = "red";
+        div.style.padding = "5%";
+        div.style.width = "100%";
+
+        div.onmouseover = function () {
+            div.style.color = "white";
+        }
+
+        let paragraph = document.getElementById("text");
+        paragraph.addEventListener("click", textClickHandler, false);
+        paragraph.addEventListener("click", textClickHandler2, false);
+
+        function textClickHandler() {
+            paragraph.style.fontSize = "20px";
+        }
+
+        function textClickHandler2(event) {
+           paragraph.innerHTML += `<br/>${event.clientX}, ${event.clientY}`
+        }
+        function mouseOverHandler() {
+            div.style.color = `white`;
+
+        }
+
+        function clickHandler() {
+            document.getElementById(`container`).style.backgroundColor = `green`;
+        }
+
+
+    </script>
+</body>
+
+</html>
