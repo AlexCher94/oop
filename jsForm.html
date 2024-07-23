@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+
+        /* signIn {
+
+        } */
+
+        label {
+            font-weight: bold;
+        }
+
+        form {
+            width: 50%;
+            margin: 10%;
+        }
+
+        /* #login #password {
+
+        } */
+    </style>
+</head>
+
+<body>
+    <form action="" method="get">
+        <div>
+            <label for="login">Your login:
+                <input type="text" id="login">
+            </label>
+        </div>
+        <div>
+            <label for="password">Your password:
+                <input type="text" id="password">
+        </div>
+        </label>
+
+        <div>
+            <label for="remember">Remember me
+                <input type="checkbox" id="remember">
+            </label>
+
+        </div>
+
+        <input type="submit" value="Sign in" id="signIn">
+    </form>
+
+    <script>
+        let form = document.forms[0];
+
+        form.addEventListener("submit", signUp)
+        let checkbox = document.getElementById("remember")
+
+        function signUp(e) {
+            rememberMe = checkbox.checked ? "запомнил" : "не запомнил"
+
+            if (checkbox.checked) {
+                rememberMe = "запомнил"
+            } else {
+                rememberMe = "не запомнил"
+            }
+
+            alert(`привет ${name}, я тебя ${rememberMe}`)
+        }
+
+    </script>
+</body>
+
+</html>
